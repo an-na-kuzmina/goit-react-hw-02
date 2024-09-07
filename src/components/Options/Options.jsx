@@ -1,9 +1,8 @@
-import React from 'react';
 import s from './Options.module.css';
-const Options = () => {
+
+const Options = ({ onUpdate, totalFeedback, onReset }) => {
   return (
     <div>
-      {' '}
       <button
         className={s.feedbackBtn}
         name="good"
@@ -28,6 +27,11 @@ const Options = () => {
       >
         Bad
       </button>
+      {totalFeedback > 0 && (
+        <button className={s.feedbackBtn} type="button" onClick={onReset}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };

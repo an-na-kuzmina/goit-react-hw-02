@@ -1,8 +1,11 @@
-import React from 'react';
 import s from './Notification.module.css';
 
-function Notification() {
-  return <div>Notification</div>;
-}
+const Notification = () => {
+  return (
+    <div>
+      <p className={s.notif}>No feedback yet</p>
+    </div>
+  );
+};
 
 export default Notification;
